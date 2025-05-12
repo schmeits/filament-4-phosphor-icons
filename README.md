@@ -19,8 +19,12 @@ composer require schmeits/filament-4-phosphor-icons
 ## Usage
 
 ```php
-    ->icon(Phosphor::TextAlignLeft),
+    Forms\Components\TextInput::make('name')
+        ->required()
+        ->prefixIcon(Phosphor::Smiley)
 ```
+Check out the Phosphor icons on their website [Phosphor Icons](https://phosphoricons.com/) to find the icon you want to use.
+
 
 ## Changelog
 
@@ -30,13 +34,10 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
 - [Tally Schmeits](https://github.com/schmeits)
+- [Phosphor icons](https://phosphoricons.com)
 - [All Contributors](../../contributors)
 
 ## License
