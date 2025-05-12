@@ -23,8 +23,7 @@ composer require schmeits/filament-4-phosphor-icons
         ->required()
         ->prefixIcon(Phosphor::Smiley)
 ```
-Check out the Phosphor icons on their website [Phosphor Icons](https://phosphoricons.com/) to find the icon you want to use.
-
+Check out the Phosphor icons on their website [Phosphor Icons](https://phosphoricons.com/) to find the icon you want to use.gh
 
 ## Changelog
 
