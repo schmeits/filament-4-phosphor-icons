@@ -1521,14 +1521,15 @@ enum Phosphor: string implements ScalableIcon
 
     public function getIconForSize(IconSize $size): string
     {
-        if (str_ends_with($this->value, '-fill')) {
-            return "phosphor-{$this->value}-fill";
-        }
-
         return match ($size) {
             IconSize::ExtraSmall, IconSize::Small => "phosphor-{$this->value}-thin",
             IconSize::Medium => "phosphor-{$this->value}",
             IconSize::Large, IconSize::ExtraLarge, IconSize::TwoExtraLarge => "phosphor-{$this->value}-bold",
         };
+    }
+
+    public function getIconForWeight(PhosphorWeight $weight): string
+    {
+        return "{$this->value}-{$weight->value}";
     }
 }
