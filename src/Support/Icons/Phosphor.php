@@ -1530,6 +1530,10 @@ enum Phosphor: string implements ScalableIcon
 
     public function getIconForWeight(PhosphorWeight $weight): string
     {
+        if ($weight === PhosphorWeight::Regular) {
+            return "phosphor-{$this->value}";
+        }
+
         return "phosphor-{$this->value}-{$weight->value}";
     }
 }
