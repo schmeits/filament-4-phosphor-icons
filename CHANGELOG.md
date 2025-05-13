@@ -2,6 +2,10 @@
 
 All notable changes to `filament-4-phosphor-icons` will be documented in this file.
 
+## 1.0.4 - 2025-05-13
+
+Fix: Regular weight has no prefix
+
 ## 1.0.3 - 2025-05-13
 
 Fix small bug not adding correct prefix for weights
