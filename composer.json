@@ -22,7 +22,7 @@
     "require": {
         "php": "^8.2",
         "codeat3/blade-phosphor-icons": "^2.3",
-        "filament/filament": "^v4.0.0-alpha6",
+        "filament/filament": "^v4.0.0-beta",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -73,6 +73,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
