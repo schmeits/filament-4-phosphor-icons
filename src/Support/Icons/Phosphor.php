@@ -396,6 +396,7 @@ enum Phosphor: string implements ScalableIcon
     case CloudArrowUp = 'cloud-arrow-up';
     case CloudCheck = 'cloud-check';
     case CloudFog = 'cloud-fog';
+    case CloudLightning = 'cloud-lightning';
     case CloudMoon = 'cloud-moon';
     case CloudRain = 'cloud-rain';
     case CloudSlash = 'cloud-slash';
