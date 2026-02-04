@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-02-04 10:41 - Composer Security Update (Automated)
+
+- Security vulnerabilities opgelost via composer update --with-all-dependencies
+- Run composer show --locked voor volledige package lijst
+- Composer audit: Geen openstaande kwetsbaarheden meer
+
+
 All notable changes to `filament-4-phosphor-icons` will be documented in this file.
 
 ## 1.0.4 - 2025-05-13
