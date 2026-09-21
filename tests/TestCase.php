@@ -4,6 +4,7 @@ namespace Schmeits\FilamentPhosphorIcons\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
+use Codeat3\BladePhosphorIcons\BladePhosphorIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
@@ -36,6 +37,11 @@ class TestCase extends Orchestra
             BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
             BladeIconsServiceProvider::class,
+            // Testbench does not run package discovery (only dusk and ray are
+            // auto-loaded), so the icon source must be registered here explicitly.
+            // Without this line no Phosphor icon resolves in the tests, even
+            // though it works fine in a real application.
+            BladePhosphorIconsServiceProvider::class,
             FilamentServiceProvider::class,
             FormsServiceProvider::class,
             InfolistsServiceProvider::class,
