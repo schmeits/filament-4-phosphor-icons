@@ -16,25 +16,25 @@ jobs:
       fail-fast: false
       matrix:
         php: [8.5, 8.4, 8.3, 8.2]
-        laravel: [13.*, 12.*, 11.*]
+        laravel: [13.*, 12.*]
         filament: ["^5.8.2", "^4.13.2"]
         stability: [prefer-stable]
         include:
-          - laravel: 11.*
-            testbench: 9.*
           - laravel: 12.*
             testbench: 10.*
           - laravel: 13.*
             testbench: 11.*
-          # The lowest versions this package allows, on the oldest PHP.
+          # The lowest versions this package allows, on the oldest PHP. Laravel 11
+          # is not tested: every 11.x release has open security advisories, so
+          # Composer refuses to install it.
           - php: 8.2
-            laravel: 11.*
-            testbench: 9.*
+            laravel: 12.*
+            testbench: 10.*
             filament: "^4.13.2"
             stability: prefer-lowest
           - php: 8.2
-            laravel: 11.*
-            testbench: 9.*
+            laravel: 12.*
+            testbench: 10.*
             filament: "^5.8.2"
             stability: prefer-lowest
           - php: 8.3
@@ -46,9 +46,6 @@ jobs:
           # Laravel 13 needs PHP 8.3 or higher.
           - laravel: 13.*
             php: 8.2
-          # Laravel 11 does not support PHP 8.5.
-          - laravel: 11.*
-            php: 8.5
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - F${{ matrix.filament }} - ${{ matrix.stability }}
 

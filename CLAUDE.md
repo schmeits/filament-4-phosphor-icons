@@ -40,7 +40,7 @@ Pest with Orchestra Testbench. The `TestCase` registers the Filament providers e
 - the committed enum equals the generator output;
 - architecture rules (strict types, no debug calls).
 
-CI runs the tests on PHP 8.2 to 8.5 x Laravel 11 to 13 x Filament 4 and 5.
+CI runs the tests on PHP 8.2 to 8.5 x Laravel 12 and 13 x Filament 4 and 5 (Laravel 11 is end-of-life: every release has open advisories, so Composer will not install it).
 
 ## Adding new icons
 

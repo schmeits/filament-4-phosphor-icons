@@ -4,11 +4,11 @@ All notable changes to `filament-4-phosphor-icons` will be documented in this fi
 
 ## Unreleased
 
-- Support Filament 5 next to Filament 4, and Laravel 13.
+- Support Filament 5 next to Filament 4, and Laravel 13. Laravel 11 is end-of-life and no longer tested.
 - Require Filament 4.13.2 or 5.8.2 or higher, the first versions without known security advisories.
 - Require codeat3/blade-phosphor-icons 2.4 or higher, the version the enum is generated from.
 - The enum generator moved to `bin/generate-enum.php` (`composer generate-enum`) and records the upstream version in the generated file.
-- Tests now run in CI on PHP 8.2 to 8.5, Laravel 11 to 13 and Filament 4 and 5, including a render test through Filament's icon component and a check that the enum matches the generator.
+- Tests now run in CI on PHP 8.2 to 8.5, Laravel 12 and 13 and Filament 4 and 5, including a render test through Filament's icon component and a check that the enum matches the generator.
 - PHPStan on level max for the source, the tests and the generator.
 - Every PHP file declares strict types.
 - Removed unused template code: the `$viewNamespace` property on the service provider, the non-existent facade alias and factory namespace, and the unused frontend tooling.

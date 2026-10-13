@@ -13,7 +13,7 @@ The icons themselves come from [codeat3/blade-phosphor-icons](https://github.com
 
 | Package | Filament | Laravel | PHP |
 |---------|----------|---------|-----|
-| 1.1     | 4.13.2+ and 5.8.2+ | 11.28+, 12, 13 | 8.2+ (Laravel 13: 8.3+) |
+| 1.1     | 4.13.2+ and 5.8.2+ | 12, 13 (11.28+ installs, but is end-of-life and untested) | 8.2+ (Laravel 13: 8.3+) |
 | 1.0     | 4.x | 11, 12 | 8.2+ |
 
 The minimum Filament versions are the first ones without known security advisories.
