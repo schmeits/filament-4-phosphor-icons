@@ -42,7 +42,7 @@ it('finds an SVG file for every icon at every weight', function (PhosphorWeight 
     expect($missing)->toBeEmpty(
         'Missing SVG files for weight ' . $weight->value . ': ' . implode(', ', array_slice($missing, 0, 20)),
     );
-})->with(PhosphorWeight::cases());
+})->with(fn (): array => PhosphorWeight::cases());
 
 it('finds an existing SVG file for every Filament IconSize', function (IconSize $size) {
     // getIconForSize() maps to thin, regular or bold. If one of those weights
@@ -60,7 +60,7 @@ it('finds an existing SVG file for every Filament IconSize', function (IconSize 
     expect($missing)->toBeEmpty(
         'Missing SVG files for size ' . $size->value . ': ' . implode(', ', array_slice($missing, 0, 20)),
     );
-})->with(IconSize::cases());
+})->with(fn (): array => IconSize::cases());
 
 it('covers every icon from the source with the enum', function () {
     // The reverse check: if the source ships new icons, the enum is missing
