@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Smoke tests for the public enums this package exposes.
  *

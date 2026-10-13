@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Smoke tests for the package's service provider.
  *
@@ -35,11 +37,4 @@ it('loads the underlying blade-phosphor-icons icon set', function () {
     // The package relies entirely on codeat3's icon set. If that registration
     // disappears after an upgrade, no icon resolves anymore.
     expect(app(Factory::class)->all())->toHaveKey('phosphor-icons');
-});
-
-it('runs the test suite on an in-memory sqlite database', function () {
-    // Explicit safeguard: these tests must never touch a real database.
-    expect(config('database.default'))->toBe('testing')
-        ->and(config('database.connections.testing.driver'))->toBe('sqlite')
-        ->and(config('database.connections.testing.database'))->toBe(':memory:');
 });

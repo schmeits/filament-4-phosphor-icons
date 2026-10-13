@@ -2,9 +2,9 @@ includes:
     - phpstan-baseline.neon
 
 parameters:
-    level: 4
+    level: max
     paths:
         - src
+        - tests
+        - bin
     tmpDir: build/phpstan
-    checkModelProperties: true
-

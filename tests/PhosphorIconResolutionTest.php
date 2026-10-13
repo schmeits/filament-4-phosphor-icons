@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Smoke tests that prove every enum case actually points at an existing SVG
  * in the icon source codeat3/blade-phosphor-icons.
@@ -15,18 +17,6 @@ use BladeUI\Icons\Factory;
 use Filament\Support\Enums\IconSize;
 use Schmeits\FilamentPhosphorIcons\Support\Icons\Phosphor;
 use Schmeits\FilamentPhosphorIcons\Support\Icons\PhosphorWeight;
-
-/**
- * Path to the icon source's SVG directory, resolved through the registered set.
- * Deliberately not hardcoded: this way the test also proves the registration is
- * correct.
- */
-function phosphorSvgPath(): string
-{
-    $set = app(Factory::class)->all()['phosphor-icons'];
-
-    return $set['paths'][0];
-}
 
 /**
  * Translates a blade-icon name (phosphor-acorn-bold) to the file on disk.
@@ -76,7 +66,7 @@ it('covers every icon from the source with the enum', function () {
     // The reverse check: if the source ships new icons, the enum is missing
     // them. That is not a crash but a gap we deliberately want to see after a
     // dependency upgrade, so we can update the enum.
-    $files = glob(phosphorSvgPath() . '/*.svg');
+    $files = phosphorSvgFiles();
 
     $suffixes = array_map(
         fn (PhosphorWeight $weight): string => '-' . $weight->value,
@@ -109,7 +99,7 @@ it('covers every icon from the source with the enum', function () {
 it('has as many enum cases as unique icons in the source', function () {
     // A hard count alongside the diff above: if the number changes, something
     // about the source has changed and someone needs to look at it.
-    $fileCount = count(glob(phosphorSvgPath() . '/*.svg'));
+    $fileCount = count(phosphorSvgFiles());
 
     expect(count(Phosphor::cases()) * count(PhosphorWeight::cases()))
         ->toBe($fileCount);
