@@ -1,10 +1,15 @@
 {
     "name": "schmeits/filament-4-phosphor-icons",
-    "description": "This is my package filament-4-phosphor-icons",
+    "description": "Phosphor icons for Filament 4 and 5 as a backed enum that scales with Filament's icon sizes, in all six Phosphor weights.",
     "keywords": [
         "schmeits",
         "laravel",
-        "filament-4-phosphor-icons"
+        "filament",
+        "filament-plugin",
+        "icons",
+        "phosphor",
+        "phosphor-icons",
+        "blade-icons"
     ],
     "homepage": "https://github.com/schmeits/filament-4-phosphor-icons",
     "support": {
@@ -21,27 +26,26 @@
     ],
     "require": {
         "php": "^8.2",
-        "codeat3/blade-phosphor-icons": "^2.3",
-        "filament/filament": "^v4.0.0-beta",
+        "codeat3/blade-phosphor-icons": "^2.4",
+        "filament/filament": "^4.13.2|^5.8.2",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
+        "larastan/larastan": "^3.0",
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^8.0",
-        "larastan/larastan": "^3.0",
-        "orchestra/testbench": "^10.0",
-        "pestphp/pest": "^3.2",
-        "pestphp/pest-plugin-arch": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-arch": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0",
         "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "Schmeits\\FilamentPhosphorIcons\\": "src/",
-            "Schmeits\\FilamentPhosphorIcons\\Database\\Factories\\": "database/factories/"
+            "Schmeits\\FilamentPhosphorIcons\\": "src/"
         }
     },
     "autoload-dev": {
@@ -54,7 +58,8 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "generate-enum": "@php bin/generate-enum.php"
     },
     "config": {
         "sort-packages": true,
@@ -67,12 +72,8 @@
         "laravel": {
             "providers": [
                 "Schmeits\\FilamentPhosphorIcons\\FilamentPhosphorIconsServiceProvider"
-            ],
-            "aliases": {
-                "FilamentPhosphorIcons": "Schmeits\\FilamentPhosphorIcons\\Facades\\FilamentPhosphorIcons"
-            }
+            ]
         }
     },
-    "minimum-stability": "beta",
     "prefer-stable": true
 }
