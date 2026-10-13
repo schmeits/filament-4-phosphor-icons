@@ -2,7 +2,7 @@
 
 All notable changes to `filament-4-phosphor-icons` will be documented in this file.
 
-## Unreleased
+## 1.1.0 - 2026-10-13
 
 - Support Filament 5 next to Filament 4, and Laravel 13. Laravel 11 is end-of-life and no longer tested.
 - Require Filament 4.13.2 or 5.8.2 or higher, the first versions without known security advisories.
