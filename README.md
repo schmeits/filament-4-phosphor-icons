@@ -85,6 +85,10 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [our security policy](.github/SECURITY.md) on how to report security vulnerabilities.
 
+## Need help with Filament?
+
+I'm Tally Schmeits, the maintainer of this package. I build and maintain Filament and Laravel applications for clients: new admin panels and business applications, upgrades to Filament 4 and 5, and taking over existing Filament apps. More at [schmeits.com/filament-specialist](https://schmeits.com/filament-specialist).
+
 ## Credits
 
 - [Tally Schmeits](https://github.com/schmeits)
